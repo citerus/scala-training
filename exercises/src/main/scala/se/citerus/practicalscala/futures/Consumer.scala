@@ -19,10 +19,10 @@ class Consumer(val storage: Storage = Storage()) {
   def increaseAccumulatedValue(id: String, amount: BigDecimal): Future[BigDecimal] = ???
 
   // Implement in exercise 7
-  def allAccounts(): Future[Set[Account]] = ???
+  def allAccounts(): Future[List[Account]] = ???
 
   // Implement in exercise 8
-  def activeAccounts(today: LocalDate): Future[Set[Account]] = ???
+  def activeAccounts(today: LocalDate): Future[List[Account]] = ???
 
   // Async wrappers for storage access
   def findById(id: String): Future[Option[Account]] = Future { storage.findById(id) }
